@@ -11,13 +11,13 @@ function App() {
 
   function greetings(hour){
     console.log('greetings fired  ------ ' + hour)
-    if(hour > 5 && hour < 12){
+    if( hour < 12){
       setGreeting('Good Morning')
       console.log('here1')
-    }else if(hour > 12 && hour < 18){
+    }else if(hour >= 12 && hour < 18){
       setGreeting('Good Afternoon')
       console.log('here2')
-    }else if(hour > 18 && hour < 5){
+    }else if(hour >= 18){
       setGreeting('Good Evening')
       console.log('here3')
     }
@@ -31,7 +31,7 @@ function App() {
             </header>
             <main>
                 <Clock greetCallBack = {h=>greetings(h)} />
-               
+                <Weather/>
             </main>
     </div>
   );
