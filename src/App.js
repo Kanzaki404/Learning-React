@@ -30,7 +30,7 @@ function App() {
                 <h1>{greeting}, SweetRoll</h1>
             </header>
             <main>
-                <Clock greetCallBack = {()=>greetings()} />
+                <Clock greetCallBack = {h=>greetings(h)} />
                
             </main>
     </div>
